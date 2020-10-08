@@ -3,6 +3,27 @@
 	background-color: #929496;
 	text-align: center;
 	font-size: 30px;
-	height: 75px;
+	height: 100px;
+	padding: 8px;
+	margin: auto;
 	width: 100%;
+}
+
+.form-control form-control-sm ml-3 w-75 {
+	float: left;
+}
+
+#city-weather {
+	height: 400px;
+	margin: auto;
+	position: right;
+	background-color: crimson;
+	border-color: cornflowerblue;
+	border: 3px;
+}
+
+#five-day {
+	height: 200px;
+	background-color: cyan;
+	position: right;
 }
