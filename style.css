@@ -17,13 +17,13 @@
 	height: 400px;
 	margin: auto;
 	position: right;
-	background-color: crimson;
-	border-color: cornflowerblue;
+
+	border-color: 5 px solid cornflowerblue;
 	border: 3px;
 }
 
 #five-day {
 	height: 200px;
-	background-color: cyan;
+	border: 5 px solid blueviolet;
 	position: right;
 }
