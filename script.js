@@ -4,6 +4,7 @@ $(document).ready(function () {
 	var _5DayBox = $("#five-day");
 
 	function getWeatherReport(cityToSearch) {
+		$("#searchCity").text("");
 		$.ajax({
 			url:
 				"http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -94,6 +95,7 @@ $(document).ready(function () {
 
 	$("#submitCity").on("submit", function (event) {
 		$("#city-weather").empty();
+
 		event.preventDefault();
 		var city = $("#searchCity").val();
 		console.log(city);
