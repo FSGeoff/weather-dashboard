@@ -44,7 +44,7 @@ $(document).ready(function () {
 			var todayWeatherDiv = $("<div>");
 			todayWeatherDiv.attr("id", "today-box");
 
-			var cityHeader = $("<h1>");
+			var cityHeader = $("<h3>");
 			cityHeader.attr("id", "city-head");
 			cityHeader.text(cityToSearch + " " + date);
 			todayWeatherDiv.append(cityHeader);
