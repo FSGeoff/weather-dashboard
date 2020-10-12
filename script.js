@@ -1,10 +1,11 @@
 $(document).ready(function () {
-	var city = "";
 	var currentCity = $("#city-weather");
 	var _5DayBox = $("#five-day");
 
 	function getWeatherReport(cityToSearch) {
 		$("#searchCity").val("");
+		$("#city-weather").empty();
+
 		$.ajax({
 			url:
 				"http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -93,9 +94,7 @@ $(document).ready(function () {
 		$("#city-list").append(cityListDiv);
 	}
 
-	$("#submitCity").on("submit", function (event) {
-		$("#city-weather").empty();
-
+	$("#start-search").on("click", function (event) {
 		event.preventDefault();
 		var city = $("#searchCity").val();
 		console.log(city);
