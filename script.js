@@ -2,7 +2,6 @@ $(document).ready(function () {
 	var currentCity = $("#city-weather");
 	var _5DayBox = $("#five-day");
 	var date = moment().format("L");
-	console.log(date);
 
 	var getCity = JSON.parse(localStorage.getItem("city"));
 	if (getCity) {
@@ -21,28 +20,8 @@ $(document).ready(function () {
 
 			method: "GET",
 		}).then(function (response) {
-			// var long = response.city.coord.long;
-
-			console.log(response.coord.lon);
-			console.log(response.coord.lat);
-
-			// console.log(response);
-			// console.log(response.name);
-			// console.log(
-			// 	"The current forecast calls for " +
-			// 		response.weather[0].description
-			// );
-			// console.log(
-			// 	"The current temperature is " + response.main.temp + "F"
-			// );
-			// console.log("Low:" + response.main.temp_min + "F");
-			// console.log("High:" + response.main.temp_max + "F");
-			// console.log(
-			// 	"Humidity currently at " + response.main.humidity + "%"
-			// );
-			// console.log(
-			// 	"Wind is moving at a speed of:" + response.wind.speed + "mph"
-			// );
+			var longitude = response.coord.lon;
+			var latitude = response.coord.lat;
 
 			var todayWeatherDiv = $("<div>");
 			todayWeatherDiv.attr("id", "today-box");
@@ -93,9 +72,14 @@ $(document).ready(function () {
 		});
 	}
 
-	function uVIndex(longLat) {
+	function uVIndex(longitude, latitude) {
 		$.ajax({
-			url: "",
+			url:
+				"http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" +
+				latitude +
+				"&lon=" +
+				longitude +
+				"&appid=73bc46b9424e41f245151d328bfa5a7a",
 			method: "GET",
 		}).then(function (response) {
 			console.log(response);
@@ -149,14 +133,6 @@ $(document).ready(function () {
 
 				$("#five-day").append(_dayDiv);
 			}
-
-			// console.log(_response.city.name);
-			// console.log(listArray[0].main.temp);
-			// console.log(listArray[0].main.temp_min);
-			// console.log(listArray[0].main.temp_max);
-
-			// console.log(_response.list);
-			// console.log(listArray[0].weather);
 		});
 	}
 
