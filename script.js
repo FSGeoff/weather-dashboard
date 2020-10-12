@@ -120,7 +120,7 @@ $(document).ready(function () {
 				var temp = day.main.temp;
 				var _dayDiv = $("<div>");
 				_dayDiv.attr("class", "day-box");
-				_dayDiv.attr("id", "_boxForecast");
+				_dayDiv.attr("id", "five-day");
 
 				var _4castTemp = $("<p>");
 				_4castTemp.attr("class", "info");
@@ -129,7 +129,7 @@ $(document).ready(function () {
 				_dayDiv.append(_4castTemp);
 
 				var _humidity = $("<p>");
-				_humidity.attr("class", "humid");
+				_humidity.attr("class", "info");
 				_humidity.attr("id", "humidity-box");
 				_humidity.text("Humidity: " + humidity + "%");
 				_dayDiv.append(_humidity);

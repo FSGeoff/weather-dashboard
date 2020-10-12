@@ -17,18 +17,21 @@
 	height: 400px;
 	margin: auto;
 	position: right;
-
-	border-color: 5 px solid cornflowerblue;
-	border: 3px;
 }
 
-#five-day {
-	height: 200px;
+/* .info {
+	float: left;
+	margin: 10px;
+	height: 80 px;
+	width: 60 px;
 	background-color: cornflowerblue;
-	position: right;
-}
-
+	border: solid 3px;
+} */
 .day-box {
 	float: left;
-	margin: 3px;
+	margin: 10px;
+	height: 80 px;
+	width: 60 px;
+	background-color: cornflowerblue;
+	border: solid 3px;
 }
