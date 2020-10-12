@@ -12,6 +12,8 @@ $(document).ready(function () {
 
 			method: "GET",
 		}).then(function (response) {
+			$("holder").empty();
+
 			console.log(response);
 			console.log(response.name);
 			console.log(
@@ -74,6 +76,7 @@ $(document).ready(function () {
 			todayWeatherDiv.append(forecast);
 
 			$("#city-weather").append(todayWeatherDiv);
+
 			cityList(cityToSearch);
 		});
 	}
@@ -90,6 +93,7 @@ $(document).ready(function () {
 	}
 
 	$("#submitCity").on("submit", function (event) {
+		$("#city-weather").empty();
 		event.preventDefault();
 		var city = $("#searchCity").val();
 		console.log(city);
