@@ -11,12 +11,13 @@ $(document).ready(function () {
 		method: "GET",
 	}).then(function (_response) {
 		var listArray = _response.list;
-		console.log(_response.city.name);
-		console.log(listArray[0].main.temp);
-		console.log(listArray[0].main.temp_min);
-		console.log(listArray[0].main.temp_max);
 
-		console.log(_response.list);
-		console.log(listArray[0].weather);
+		// console.log(_response.city.name);
+		// console.log(listArray[0].main.temp);
+		// console.log(listArray[0].main.temp_min);
+		// console.log(listArray[0].main.temp_max);
+
+		// console.log(_response.list);
+		// console.log(listArray[0].weather);
 	});
 });
