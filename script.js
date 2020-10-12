@@ -105,6 +105,7 @@ $(document).ready(function () {
 			"http://api.openweathermap.org/data/2.5/forecast?q=" +
 			city +
 			"&units=imperial&appid=";
+		$("#five-day").empty();
 
 		$.ajax({
 			url: _queryURL + _key,
@@ -124,13 +125,13 @@ $(document).ready(function () {
 				var _4castTemp = $("<p>");
 				_4castTemp.attr("class", "info");
 				_4castTemp.attr("id", "cast-temp");
-				_4castTemp.text(temp);
+				_4castTemp.text("Temp: " + parseInt(temp) + "F");
 				_dayDiv.append(_4castTemp);
 
 				var _humidity = $("<p>");
 				_humidity.attr("class", "humid");
 				_humidity.attr("id", "humidity-box");
-				_humidity.text(humidity);
+				_humidity.text("Humidity: " + humidity + "%");
 				_dayDiv.append(_humidity);
 
 				$("#five-day").append(_dayDiv);
