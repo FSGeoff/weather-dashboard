@@ -21,7 +21,10 @@ $(document).ready(function () {
 
 			method: "GET",
 		}).then(function (response) {
-			$("holder").empty();
+			// var long = response.city.coord.long;
+
+			console.log(response.coord.lon);
+			console.log(response.coord.lat);
 
 			// console.log(response);
 			// console.log(response.name);
@@ -90,6 +93,15 @@ $(document).ready(function () {
 		});
 	}
 
+	function uVIndex(longLat) {
+		$.ajax({
+			url: "",
+			method: "GET",
+		}).then(function (response) {
+			console.log(response);
+		});
+	}
+
 	function cityList(listOfCities) {
 		var cityListDiv = $("<div>");
 		cityListDiv.attr("id", "past-city-list");
@@ -116,7 +128,6 @@ $(document).ready(function () {
 			var listArray = _response.list;
 			var _forecast = listArray.slice(0, 5);
 			for (let i = 0; i < _forecast.length; i++) {
-				console.log(_forecast[i]);
 				var day = _forecast[i];
 				var humidity = day.main.humidity;
 				var temp = day.main.temp;
