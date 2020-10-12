@@ -2,7 +2,7 @@
 	color: rgb(253, 250, 250);
 	background-color: #929496;
 	text-align: center;
-	font-size: 30px;
+	font-size: 40px;
 	height: 100px;
 	padding: 8px;
 	margin: auto;
@@ -24,6 +24,10 @@
 
 #five-day {
 	height: 200px;
-	border: 5 px solid blueviolet;
+	background-color: cornflowerblue;
 	position: right;
+}
+
+.day-box {
+	float: left;
 }
