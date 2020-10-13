@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	var currentCity = $("#city-weather");
-	var _5DayBox = $("#five-day");
+	// var currentCity = $("#city-weather");
+	// var _5DayBox = $("#five-day");
 	var date = moment().format("L");
 
 	var getCity = JSON.parse(localStorage.getItem("city"));
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
 			var cityHeader = $("<h3>");
 			cityHeader.attr("id", "city-head");
-			cityHeader.text(cityToSearch + " " + date);
+			cityHeader.text(cityToSearch + " (" + date + ")");
 			todayWeatherDiv.append(cityHeader);
 
 			var temperature = $("<p>");
