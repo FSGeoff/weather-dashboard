@@ -171,7 +171,7 @@ $(document).ready(function () {
 				feelsLike.attr("class", "info");
 				feelsLike.attr("id", "feel");
 				feelsLike.text(
-					"feels like: " + Math.round(listArray[i].main.feels_like)
+					"Feels like: " + Math.round(listArray[i].main.feels_like)
 				);
 				_dayDiv.append(feelsLike);
 				$("#five-day").append(_dayDiv);
