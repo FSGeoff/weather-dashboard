@@ -51,11 +51,11 @@ $(document).ready(function () {
 			windSpeed.text("Wind Speed: " + response.wind.speed + "MPH");
 			todayWeatherDiv.append(windSpeed);
 
-			var uvIndex = $("<p>");
-			uvIndex.attr("id", "uv-dex");
-			uvIndex.attr("class", "main-box");
-			uvIndex.text("UV Index: ");
-			todayWeatherDiv.append(uvIndex);
+			// var uvIndex = $("<p>");
+			// uvIndex.attr("id", "uv-dex");
+			// uvIndex.attr("class", "main-box");
+			// uvIndex.text("UV Index: ");
+			// todayWeatherDiv.append(uvIndex);
 
 			var forecast = $("<p>");
 			forecast.attr("id", "for-cst");
@@ -69,20 +69,28 @@ $(document).ready(function () {
 			$("#city-weather").append(todayWeatherDiv);
 
 			cityList(cityToSearch);
+			uVIndex(longitude, latitude);
 		});
 	}
 
-	function uVIndex(longitude, latitude) {
+	function uVIndex(lon, lat) {
 		$.ajax({
 			url:
 				"http://api.openweathermap.org/data/2.5/uvi/forecast?lat=" +
-				latitude +
+				lat +
 				"&lon=" +
-				longitude +
+				lon +
 				"&appid=73bc46b9424e41f245151d328bfa5a7a",
 			method: "GET",
 		}).then(function (response) {
-			console.log(response);
+			var uVRating = response[0].value;
+			console.log(uVRating);
+
+			var uvi = $("<p>");
+			uvi.attr("class", "uv-rate");
+			uvi.text("UV Index: " + uVRating);
+
+			$("#city-weather").append(uvi);
 		});
 	}
 
