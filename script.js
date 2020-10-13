@@ -78,14 +78,30 @@ $(document).ready(function () {
 			method: "GET",
 		}).then(function (response) {
 			var uVRating = response[0].value;
-			console.log(uVRating);
 
 			var uvi = $("<p>");
-			if (parseInt(uVRating) > 9) {
-				uvi.css("background-color", "red");
-			} else {
-				uvi.css("background-color", "green");
+			var uvScore = parseInt(Math.round(uVRating));
+
+			switch (uvScore) {
+				case (uvScore = 0):
+				case (uvScore = 1):
+				case (uvScore = 2):
+					uvi.css("background-color", "green");
+					break;
+				case (uvScore = 3):
+				case (uvScore = 4):
+				case (uvScore = 5):
+					uvi.css("background-color", "yellow");
+					break;
+				case (uvScore = 6):
+				case (uvScore = 7):
+				case (uvScore = 8):
+					uvi.css("background-color", "orange");
+					break;
+				default:
+					uvi.css("background-color", "red");
 			}
+
 			uvi.attr("class", "uv-rate");
 			uvi.css("width", "20%");
 			uvi.text("UV Index: " + uVRating);
