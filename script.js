@@ -1,6 +1,4 @@
 $(document).ready(function () {
-	// var currentCity = $("#city-weather");
-	// var _5DayBox = $("#five-day");
 	var date = moment().format("L");
 
 	var getCity = JSON.parse(localStorage.getItem("city"));
@@ -80,7 +78,7 @@ $(document).ready(function () {
 			var uVRating = response[0].value;
 
 			var uvi = $("<p>");
-			var uvScore = parseInt(Math.round(uVRating));
+			var uvScore = Math.round(parseInt(uVRating));
 
 			switch (uvScore) {
 				case (uvScore = 0):
