@@ -17,6 +17,7 @@
 	height: 250px;
 	margin: auto;
 	position: right;
+	border: solid rgb(235, 231, 231) 3px;
 }
 
 #city-head {
