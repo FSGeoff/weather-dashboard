@@ -76,7 +76,6 @@ $(document).ready(function () {
 			method: "GET",
 		}).then(function (response) {
 			var uVRating = response[0].value;
-
 			var uvi = $("<p>");
 			var uvScore = parseInt(Math.round(uVRating));
 
@@ -119,7 +118,7 @@ $(document).ready(function () {
 		var lastCityChosen = $("<p>");
 		lastCityChosen.attr("class", "past-list");
 		lastCityChosen.text(listOfCities);
-		cityListDiv.append(lastCityChosen);
+		cityListDiv.prepend(lastCityChosen);
 		$("#city-list").append(cityListDiv);
 	}
 
