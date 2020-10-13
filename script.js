@@ -118,6 +118,13 @@ $(document).ready(function () {
 				var _dayDiv = $("<div>");
 				_dayDiv.attr("class", "day-box");
 				_dayDiv.attr("id", "five-day");
+				_dayDiv.css("height", "175px");
+				_dayDiv.css("width", "125px");
+				_dayDiv.css("font-size", "15px");
+
+				var dateDisplay = $("<p>");
+				dateDisplay.text(moment().add([i], "days").calendar());
+				_dayDiv.append(dateDisplay);
 
 				var _4castTemp = $("<p>");
 				_4castTemp.attr("class", "info");

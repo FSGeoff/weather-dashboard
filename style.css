@@ -27,8 +27,9 @@
 .day-box {
 	float: left;
 	margin: 10px;
-	height: 80 px;
-	width: 60 px;
-	background-color: cornflowerblue;
-	border: solid 3px;
+	height: 100 px;
+	width: 75 px;
+	color: white;
+	background-color: rgb(69, 124, 228);
+	border: solid black 3px;
 }
