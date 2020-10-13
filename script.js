@@ -161,12 +161,6 @@ $(document).ready(function () {
 				_4castTemp.text("Temp: " + parseInt(temp) + "F");
 				_dayDiv.append(_4castTemp);
 
-				var _humidity = $("<p>");
-				_humidity.attr("class", "info");
-				_humidity.attr("id", "humidity-box");
-				_humidity.text("Humidity: " + humidity + "%");
-				_dayDiv.append(_humidity);
-
 				var feelsLike = $("<p>");
 				feelsLike.attr("class", "info");
 				feelsLike.attr("id", "feel");
@@ -174,6 +168,13 @@ $(document).ready(function () {
 					"Feels like: " + Math.round(listArray[i].main.feels_like)
 				);
 				_dayDiv.append(feelsLike);
+
+				var _humidity = $("<p>");
+				_humidity.attr("class", "info");
+				_humidity.attr("id", "humidity-box");
+				_humidity.text("Humidity: " + humidity + "%");
+				_dayDiv.append(_humidity);
+
 				$("#five-day").append(_dayDiv);
 			}
 		});
