@@ -78,7 +78,7 @@ $(document).ready(function () {
 			var uVRating = response[0].value;
 
 			var uvi = $("<p>");
-			var uvScore = Math.round(parseInt(uVRating));
+			var uvScore = parseInt(Math.round(uVRating));
 
 			switch (uvScore) {
 				case (uvScore = 0):
@@ -101,7 +101,7 @@ $(document).ready(function () {
 			}
 
 			uvi.attr("class", "uv-rate");
-			uvi.css("width", "20%");
+			uvi.css("width", "15%");
 			uvi.text("UV Index: " + uVRating);
 
 			$("#city-weather").append(uvi);
@@ -137,6 +137,8 @@ $(document).ready(function () {
 		}).then(function (_response) {
 			var listArray = _response.list;
 			var _forecast = listArray.slice(0, 5);
+			console.log(listArray[0].main.feels_like);
+
 			for (let i = 0; i < _forecast.length; i++) {
 				var day = _forecast[i];
 				var humidity = day.main.humidity;
@@ -165,6 +167,13 @@ $(document).ready(function () {
 				_humidity.text("Humidity: " + humidity + "%");
 				_dayDiv.append(_humidity);
 
+				var feelsLike = $("<p>");
+				feelsLike.attr("class", "info");
+				feelsLike.attr("id", "feel");
+				feelsLike.text(
+					"feels like: " + Math.round(listArray[i].main.feels_like)
+				);
+				_dayDiv.append(feelsLike);
 				$("#five-day").append(_dayDiv);
 			}
 		});
