@@ -89,6 +89,10 @@ $(document).ready(function () {
 	function cityList(listOfCities) {
 		var cityListDiv = $("<div>");
 		cityListDiv.attr("id", "past-city-list");
+		cityListDiv.css("height", "35px");
+		cityListDiv.css("background-color", "#f7f7f7");
+		cityListDiv.css("font-size", "22px");
+		cityListDiv.css("border", "solid grey 1px");
 
 		var lastCityChosen = $("<p>");
 		lastCityChosen.attr("class", "past-list");
@@ -121,6 +125,7 @@ $(document).ready(function () {
 				_dayDiv.css("height", "175px");
 				_dayDiv.css("width", "125px");
 				_dayDiv.css("font-size", "15px");
+				_dayDiv.css("border-radius", "10px");
 
 				var dateDisplay = $("<p>");
 				dateDisplay.text(moment().add([i], "days").calendar());

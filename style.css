@@ -24,6 +24,10 @@
 	width: 100%;
 }
 
+#city-list {
+	background-color: #eaeef1;
+}
+
 .day-box {
 	float: left;
 	margin: 10px;
@@ -31,5 +35,5 @@
 	width: 75 px;
 	color: white;
 	background-color: rgb(69, 124, 228);
-	border: solid black 3px;
+	border: solid rgb(246, 243, 243) 2px;
 }
