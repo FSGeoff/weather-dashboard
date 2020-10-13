@@ -51,12 +51,6 @@ $(document).ready(function () {
 			windSpeed.text("Wind Speed: " + response.wind.speed + "MPH");
 			todayWeatherDiv.append(windSpeed);
 
-			// var uvIndex = $("<p>");
-			// uvIndex.attr("id", "uv-dex");
-			// uvIndex.attr("class", "main-box");
-			// uvIndex.text("UV Index: ");
-			// todayWeatherDiv.append(uvIndex);
-
 			var forecast = $("<p>");
 			forecast.attr("id", "for-cst");
 			forecast.attr("class", "main-box");
@@ -131,7 +125,7 @@ $(document).ready(function () {
 				_dayDiv.attr("class", "day-box");
 				_dayDiv.attr("id", "five-day");
 				_dayDiv.css("height", "175px");
-				_dayDiv.css("width", "125px");
+				_dayDiv.css("width", "150px");
 				_dayDiv.css("font-size", "15px");
 				_dayDiv.css("border-radius", "10px");
 
