@@ -130,9 +130,9 @@ $(document).ready(function () {
 				var _dayDiv = $("<div>");
 				_dayDiv.attr("class", "day-box");
 				_dayDiv.attr("id", "five-day");
-				_dayDiv.css("height", "175px");
+				_dayDiv.css("height", "180px");
 				_dayDiv.css("width", "150px");
-				_dayDiv.css("font-size", "15px");
+				_dayDiv.css("font-size", "13px");
 				_dayDiv.css("border-radius", "10px");
 
 				var dateDisplay = $("<p>");
