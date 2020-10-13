@@ -81,7 +81,13 @@ $(document).ready(function () {
 			console.log(uVRating);
 
 			var uvi = $("<p>");
+			if (parseInt(uVRating) > 9) {
+				uvi.css("background-color", "red");
+			} else {
+				uvi.css("background-color", "green");
+			}
 			uvi.attr("class", "uv-rate");
+			uvi.css("width", "20%");
 			uvi.text("UV Index: " + uVRating);
 
 			$("#city-weather").append(uvi);
