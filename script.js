@@ -156,7 +156,6 @@ $(document).ready(function () {
 			alert("Please enter a valid city");
 		} else {
 			localStorage.setItem("city", JSON.stringify(city));
-			console.log(city);
 			getWeatherReport(city);
 			_5day(city);
 		}
