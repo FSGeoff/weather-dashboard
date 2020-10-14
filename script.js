@@ -133,8 +133,8 @@ $(document).ready(function () {
 		$.ajax({
 			url: _queryURL + _key,
 			method: "GET",
-		}).then(function (_response) {
-			var listArray = _response.list;
+		}).then(function (response) {
+			var listArray = response.list;
 			var _forecast = listArray.slice(0, 5);
 
 			for (let i = 0; i < _forecast.length; i++) {
@@ -154,7 +154,7 @@ $(document).ready(function () {
 				_dayDiv.append(dateDisplay);
 
 				var icon = $("<img>");
-				var checkIcon = _response.list[i].weather[0].main;
+				var checkIcon = response.list[i].weather[0].main;
 				console.log(checkIcon);
 				switch (checkIcon) {
 					case checkIcon === "Rain":
