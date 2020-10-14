@@ -193,15 +193,15 @@ $(document).ready(function () {
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Snow":
-						icon.attr("src", "./icons/snow/png");
+						icon.attr("src", "./icons/snow.png");
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Sun":
-						icon.attr("src", "./icons/sun/png");
+						icon.attr("src", "./icons/sun.png");
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Wind":
-						icon.attr("src", "./icons/wind/png");
+						icon.attr("src", "./icons/wind.png");
 						icon.attr("height", "25%", "width", "25%");
 						break;
 
