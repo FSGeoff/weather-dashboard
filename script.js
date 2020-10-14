@@ -137,8 +137,6 @@ $(document).ready(function () {
 			var listArray = _response.list;
 			var _forecast = listArray.slice(0, 5);
 
-			console.log(_response.list[0].weather[0].main);
-
 			for (let i = 0; i < _forecast.length; i++) {
 				var day = _forecast[i];
 				var humidity = day.main.humidity;
@@ -200,7 +198,9 @@ $(document).ready(function () {
 				feelsLike.attr("class", "info");
 				feelsLike.attr("id", "feel");
 				feelsLike.text(
-					"Feels like: " + Math.round(listArray[i].main.feels_like)
+					"Feels like: " +
+						Math.round(listArray[i].main.feels_like) +
+						"F"
 				);
 				_dayDiv.append(feelsLike);
 
