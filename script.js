@@ -136,7 +136,8 @@ $(document).ready(function () {
 		}).then(function (_response) {
 			var listArray = _response.list;
 			var _forecast = listArray.slice(0, 5);
-			console.log(listArray[0].main.feels_like);
+
+			console.log(_response.list[0].weather[0].main);
 
 			for (let i = 0; i < _forecast.length; i++) {
 				var day = _forecast[i];
@@ -153,6 +154,41 @@ $(document).ready(function () {
 				var dateDisplay = $("<p>");
 				dateDisplay.text(moment().add([i], "days").calendar());
 				_dayDiv.append(dateDisplay);
+
+				var icon = $("<img>");
+				var checkIcon = _response.list[i].weather[0].main;
+				console.log(checkIcon);
+				switch (checkIcon) {
+					case checkIcon === "Rain":
+						icon.attr("src", "./icons/rain.png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+					case checkIcon === "Clouds":
+						icon.attr("src", "./icons/clouds.png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+					case checkIcon === "Drizzle":
+						icon.attr("src", "./icons/drizzle.png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+					case checkIcon === "Snow":
+						icon.attr("src", "./icons/snow/png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+					case checkIcon === "Sun":
+						icon.attr("src", "./icons/sun/png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+					case checkIcon === "Wind":
+						icon.attr("src", "./icons/wind/png");
+						icon.attr("height", "25%", "width", "25%");
+						break;
+
+					default:
+						icon.attr("src", "./icons/clear.png");
+						icon.attr("height", "25%", "width", "25%");
+				}
+				_dayDiv.append(icon);
 
 				var _4castTemp = $("<p>");
 				_4castTemp.attr("class", "info");
