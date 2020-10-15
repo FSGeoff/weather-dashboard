@@ -19,5 +19,8 @@ THEN I am presented with the last searched city forecast
 ![](screenshots/weatherDash1.png);
 ![](screenshots/weatherDash2.png);
 ![](screenshots/weatherDash3.png);
+![](screenshots/weatherDash4.png);
+
+https://fsgeoff.github.io/weather-dashboard/
 
 
