@@ -38,7 +38,7 @@ $(document).ready(function () {
 			temperature.attr("id", "temp");
 			temperature.attr("class", "main-box");
 			temperature.text(
-				"Temperature: " + parseInt(response.main.temp) + "F"
+				"Temperature: " + parseInt(response.main.temp) + " \xB0F"
 			);
 			todayWeatherDiv.append(temperature);
 
@@ -53,7 +53,9 @@ $(document).ready(function () {
 			var windSpeed = $("<p>");
 			windSpeed.attr("id", "wnd-spd");
 			windSpeed.attr("class", "main-box");
-			windSpeed.text("Wind Speed: " + response.wind.speed + "MPH");
+			windSpeed.text(
+				"Wind Speed: " + parseInt(response.wind.speed) + "MPH"
+			);
 			todayWeatherDiv.append(windSpeed);
 
 			// Forecast
@@ -181,32 +183,53 @@ $(document).ready(function () {
 				// Switch statement to decipher which weather icon is appropriate
 				switch (checkIcon) {
 					case checkIcon === "Rain":
-						icon.attr("src", "./icons/rain.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/09d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Clouds":
-						icon.attr("src", "./icons/clouds.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/03d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Drizzle":
-						icon.attr("src", "./icons/drizzle.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/10d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Snow":
-						icon.attr("src", "./icons/snow.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/13d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Sun":
-						icon.attr("src", "./icons/sun.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/50d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 					case checkIcon === "Wind":
-						icon.attr("src", "./icons/wind.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/50d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 						break;
 
 					default:
-						icon.attr("src", "./icons/clear.png");
+						icon.attr(
+							"src",
+							"http://openweathermap.org/img/wn/01d.png"
+						);
 						icon.attr("height", "25%", "width", "25%");
 				}
 				_dayDiv.append(icon);
@@ -215,7 +238,7 @@ $(document).ready(function () {
 				var _4castTemp = $("<p>");
 				_4castTemp.attr("class", "info");
 				_4castTemp.attr("id", "cast-temp");
-				_4castTemp.text("Temp: " + parseInt(temp) + "F");
+				_4castTemp.text("Temp: " + parseInt(temp) + " \xB0F");
 				_dayDiv.append(_4castTemp);
 
 				// Feels like temperature
@@ -225,7 +248,7 @@ $(document).ready(function () {
 				feelsLike.text(
 					"Feels like: " +
 						Math.round(listArray[i].main.feels_like) +
-						"F"
+						" \xB0F"
 				);
 				_dayDiv.append(feelsLike);
 
