@@ -16,5 +16,11 @@ THEN I am again presented with current and future conditions for that city
 WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
  -->
+![](screenshots/weatherDash1.png);
+![](screenshots/weatherDash2.png);
+![](screenshots/weatherDash3.png);
+![](screenshots/weatherDash4.png);
 
-https://github.com/FSGeoff/weather-dashboard/issues/1#issue-721083135
+https://fsgeoff.github.io/weather-dashboard/
+
+
