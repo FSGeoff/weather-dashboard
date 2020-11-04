@@ -181,57 +181,50 @@ $(document).ready(function () {
 				console.log(checkIcon);
 
 				// Switch statement to decipher which weather icon is appropriate
-				switch (checkIcon) {
-					case checkIcon === "Rain":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/09d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-					case checkIcon === "Clouds":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/03d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-					case checkIcon === "Drizzle":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/10d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-					case checkIcon === "Snow":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/13d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-					case checkIcon === "Sun":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/50d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-					case checkIcon === "Wind":
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/50d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
-						break;
-
-					default:
-						icon.attr(
-							"src",
-							"http://openweathermap.org/img/wn/01d.png"
-						);
-						icon.attr("height", "25%", "width", "25%");
+				if (checkIcon === "Rain") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/09d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else if (checkIcon === "Clouds") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/03d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else if (checkIcon === "Drizzle") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/10d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else if (checkIcon === "Snow") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/13d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else if (checkIcon === "Sun") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/50d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else if (checkIcon === "Wind") {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/50d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
+				} else {
+					icon.attr(
+						"src",
+						"http://openweathermap.org/img/wn/01d.png"
+					);
+					icon.attr("height", "25%", "width", "25%");
 				}
+
 				_dayDiv.append(icon);
 
 				// 5 day forecast temperature
